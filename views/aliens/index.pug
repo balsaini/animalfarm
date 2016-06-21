@@ -1,0 +1,20 @@
+extends ../shared/template
+block title
+  h1 Alien list
+block content
+
+  div
+  table
+    thead
+      tr: th Aliens
+    tbody
+      each alien in aliens
+        tr
+          td
+            a(href='/aliens/' + alien.id) #{alien.id}
+          td
+            p #{ alien.name }
+          td
+            p #{ alien.photo }
+          td
+            p #{ alien.planet }
